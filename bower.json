@@ -1,0 +1,27 @@
+{
+  "name": "backchart",
+  "version": "0.2.1",
+  "homepage": "https://github.com/liorch88/backchart",
+  "authors": [
+    "Xu Chenhui <xu.chenhui@live.com>"
+  ],
+  "description": "A chart library based on backbone",
+  "main": "dist/backchart.amcharts.js",
+  "keywords": [
+    "backbone",
+    "mvc",
+    "chart"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+      "backbone": ">=0.9.2",
+      "underscore": "~1"
+  }
+}
