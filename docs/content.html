@@ -1,0 +1,619 @@
+<!--********************************************************************************
+*     File Name           :     content.html
+*     Created By          :     Jone Casper
+*     Creation Date       :     [2014-02-16 21:10]
+*     Last Modified       :     [2014-02-25 00:06]
+*     Description         :     Document for backchart
+*********************************************************************************-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Backchart, a chart render librarys based on backbone.">
+		<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development, backbone, backchart, chart librarys, visualization, mvc">
+		<meta name="author" content="Jone casper">
+		<title>Backchart</title>
+
+		<!-- Bootstrap CSS-->
+		<link rel="stylesheet" type="text/css" href="statics/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="statics/css/todc-bootstrap.min.css">
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="statics/css/docs.css">
+		<link rel="shortcut icon" type="text/css" href="statics/ico/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="statics/css/google-code-prettify/prettify.css">
+
+		<!-- select2 -->
+		<link rel="stylesheet" type="text/css" href="statics/css/select2/select2.css">
+	</head>
+	<body>
+		<header class="navbar navbar-masthead navbar-default navbar-fixed-top" role="banner">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html" class="navbar-brand">Backchart</a>
+			</div>
+			<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+			<ul class="nav navbar-nav">
+				<li class="section">
+                    <a href="#introduction">Introduction</a>
+                </li>
+				<li class="section">
+                    <a href="#gettingstarted">Getting started</a>
+                </li>
+                <li class="section">
+                    <a href="#focusondata">Focus on data</a>
+                </li>
+ 				<li class="section">
+                    <a href="#moreexample">More Example</a>
+                </li>
+				<li class="section">
+					<a href="jsdoc/index.html">APIs</a>
+                </li>
+			</ul>
+			</nav>
+		</div>
+		</header>
+		<main class="main" id="content" role="main">
+			<section id="introduction">
+				<div class="bs-docs-header">
+					<div class="container">
+						<h1>Introduction</h1>
+						<p>What is this? How does it help you?</p>
+					</div>
+				</div>
+				<div class="container bs-docs-container">
+					<div class="row">
+						<h2>What is this?</h2>
+						<hr>
+						<p>Firstly, the library is not a graphics library, it is just a MVC(Model View Controller) implementation for graphics library based on Backbone.If you not familiar the <a href="http://backbonejs.org/">Backbone library</a>, you should learn it at the beginning. The library only support CanvasJS at present, but will support more widespread use of chart libraries like Highcharts, D3 etc.The follow is a list that the library will support to in future.</p>
+						<table class="table table-bordered table-striped">
+							<thead>
+								<tr>
+									<th style="width:150px;">name</th>
+									<th>Rendering technique</th>
+									<th>Has supported</th>
+									<th>License of the library</th>
+									<th>Website</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>CanvasJS</td>
+									<td>HTML5 Canvas</td>
+									<td>Yes</td>
+									<td>CC</td>
+									<td><a href="http://canvasjs.com/">http://canvasjs.com/</a></td>
+								</tr>
+								<tr>
+									<td>Highcharts</td>
+									<td>VML ,SVG, HTML5 Canvas</td>
+									<td>No</td>
+									<td>CC</td>
+									<td><a href="http://www.highcharts.com/">http://www.highcharts.com/</a></td>
+								</tr>
+								<tr>
+									<td>D3</td>
+									<td>HTML, SVG</td>
+									<td>No</td>
+									<td>BSD</td>
+									<td><a href="http://d3js.org/">http://d3js.org/</a></td>
+								</tr>
+								<tr>
+									<td>amcharts</td>
+									<td>VML ,SVG</td>
+									<td>No</td>
+									<td>has limitation of the free version</td>
+									<td><a href="http://www.amcharts.com/">http://www.amcharts.com/</a></td>
+								</tr>
+								<tr>
+									<td>flotr2</td>
+									<td>HTML5 Canvas</td>
+									<td>No</td>
+									<td>MIT</td>
+									<td><a href="http://www.humblesoftware.com/flotr2/">http://www.amcharts.com/</a></td>
+								</tr>
+							</tbody>
+						</table>
+						<h2>How does it help you?</h2>
+						<hr>
+						<p>The aim of the project is that give the traditional graphics library MVC properties based on Backbone contained data-driver, local storage etc.You can find more detail advances in <a href="http://addyosmani.github.io/backbone-fundamentals/">here</a></p>
+						<p>Backchart will give you chart library :</p>
+						<ul>
+							<li>Data-driver</li>
+							<li>Date shared</li>
+							<li>More ways to manipulate data</li>
+							<li>Local storage</li>
+							<li>Concise code logic</li>
+							<li>more...</li>
+						</ul>
+						<h2>Browser Compatibility</h2>
+						<ul>
+							<li>IE 6+*</li>
+							<li>Chrome 8+</li>
+							<li>Firefox 10+</li>
+							<li>Safari 3+</li>
+							<li>Opera 10.6+</li>
+						</ul>
+						<em><small>*Support for IE depends on you chart library.You can use <a href="http://excanvas.sourceforge.net/">excanvas</a> to make the IE6-8 to support HTML Canvas</small></em>
+					</div>
+				</div>
+			</section>
+
+			<section id="gettingstarted">
+				<div class="bs-docs-header">
+					<div class="container">
+						<h1>Getting Started</h1>
+						<p>How to install, import and use it.</p>
+					</div>
+				</div>
+				<div class="container bs-docs-container">
+					<div class="row">
+						<h2>Install</h2>
+						<hr>
+						<p>If you async loading your modules by AMD or CommonJS ,please copy all JavaScript files in dist directory but not <code>browser</code> directory to your library location. Otherwise, please copy all files in <code>browser</code> directory to your target.</p>
+
+						<h2>Import</h2>
+						<hr>
+						<p><strong>At the beginning, you should import <a href="http://backbonejs.org/">Backbone</a>, <a href="http://underscorejs.org/">Underscore</a> and the chart libraries has be supported in your application.</strong></p>
+						<h4>AMD</h4>
+						<p>Add <code>backchart</code> path in your path config.The follow code is a example loading Backchart CanvasJS library.</p>
+						<pre class="prettyprint">
+require.config({
+   path :{
+       backbone : "you/backbone/path",
+       underscore : "you/underscore/path",
+
+       //import the chart library you want to use.
+       CanvasJS : "../libs/charts/canvasjs/canvasjs",
+
+       //import the backchart to support your chart library
+       "backchart" : "backchart.canvasjs"
+       //...code...
+   }
+});
+						</pre>
+						<p>You can import different types of libraries in your application , and make true every type of chart has a unique name in your path config.</p>
+						<pre class="prettyprint">
+require.config({
+   path :{
+       //import the backchart to support your chart library
+	   "main.backchart" : "backchart.highcharts",
+	   "backup.backchart" : "backchart.canvasjs"
+       //...code...
+   }
+});
+						</pre>
+						<p>Get the Model,Collection and View instance by require <code>backchart.CHARTNAME</code></p>
+						<pre class="prettyprint">
+//Define you model
+define(["CanvasJS","backchart"], function(){
+	require(["backchart.canvasjs"], function(chart){
+		var backchartModel = backchart.model,
+            backchartCollection = backchart.collection,
+			backchartView = backchart.view;
+		//do something..
+	});
+});
+						</pre>
+
+						<h4>Browser</h4>
+						<hr>
+						<p>If you use the <code>script</code> tag at the head tag to import you script libraries, you can do like this:</p>
+						<pre class="prettyprint">
+&lt;!-- Import backbone --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;underscore.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;backbone.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- Import you chart library support --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;canvasjs.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- Import backchart --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;browser/backchart.canvasjs.js&quot;&gt;&lt;/script&gt;
+						</pre>
+
+						<p>A variable named <code>backchart</code> will be created in global namespace, and the variable's name of this is samed as the name of script.</p>
+						<pre class="prettyprint">
+//Get MVC object
+(function(window){
+    var backchartModel = backchart.canvasjs.model,
+        backchartCollection = backchart.canvasjs.collection,
+        backchartView = backchart.canvasjs.view;
+
+	//...write codes...
+})(window);
+						</pre>
+
+						<h2>Simple usage</h2>
+						<p>Firstly, you should has a few understanding of MVC structure and Backcbone library. Backchart use Backbone to wrap the processing of synchronous data and store.You don't need to care about rendering when your data changed because any changed will drive the view layer(you chart element) redraw immediately.</p>
+						<p>We still use CanvasJS to begin our example.The collection configure is same as the data configure in CanvasJS and the data format same as too.</p>
+						<div class="row">
+							<div class="col-xs-6">
+
+						<pre id="simple-example-code" class="prettyprint">
+//Define the view inherit to backchart.canvasjs.view;
+var myView = new backchartView.extend({
+	container : document.getElementById("simple-example")
+});
+//Define the collection
+var myCollection = new backchartCollection;
+
+//Bind collection to your view and set the render configure
+myView.onCollection(myCollection, {
+	type: "column",
+	showInLegend: true,
+	legendText: "The column"
+});
+//You can bind the collection again by another configure
+myView.onCollection(myCollection, {
+    type: "line",
+    showInLegend: true,
+	legendText: "The line"
+});
+//Set the data
+myCollection.set([
+	{ x: 10, y: 97800, label: "UAE"},
+	{ x: 20, y: 267017,  label: "Saudi Arabia" },
+	{ x: 30, y: 116000,  label: "Russia"},
+	{ x: 40, y: 297571, label: "Venezuela"},
+	{ x: 50, y: 154580,  label: "Iran"},
+	{ x: 60, y: 175200,  label: "Canada"},
+	{ x: 70, y: 20682,  label: "US"},
+	{ x: 80, y: 20350,  label: "China"}
+]);
+								</pre>
+							</div>
+							<div class="col-xs-6">
+								<div id="simple-example">
+								</div>
+							</div>
+						</div>
+						<p><strong>As you see, we get two types of chart by the same collection, and you just need to set data to the collection and you will get the chart.Backchart will do all thing automatically.</strong></p>
+					</div>
+
+				</div>
+			</section>
+			<section id="focusondata">
+				<div class="bs-docs-header">
+					<div class="container">
+						<h1>Focus on data</h1>
+						<p>You just need to focus on you data and forget others under Backchart.</p>
+					</div>
+				</div>
+				<div class="container bs-docs-container">
+					<div class="row">
+						<h2>BEA Example</h2>
+						<hr>
+						<p>We use the data from the Bureau of Economic Analysis (BEA) publishes economic statistics API as the data source, and we will explain a more complex example which dealing with the data to you and describe the code which can help you to have a basic understanding how to use the Backchart library.</p>
+						<p>BEA API support JSONP and CORS features, we use JSONP in here.</p>
+						<p>Assuming that one day you boss want you to make a report which showing the Per Capita Personal Income of the U.S. states in company's MIS.You begin to work out it with Backchart.</p>
+						<div class="row">
+							<div class="col-xs-12">
+								<pre id="bea-example-code" class="prettyprint">
+//Define the view inherit to backchart.canvasjs.view;
+var BEAView = new (backchartView.extend({
+    container : document.getElementById("bea-example")
+}));
+/**
+ * Define the model to deal with each row of data
+ * You should covered each data received to your chart can accept.
+ * We used CanvasJS, so add label,legendText and y in my data
+ **/
+var BEAModel = backchartModel.extend({
+	parse : function(respo){
+    	return {
+            label : respo.GeoName,
+            legendText: respo.GeoName,
+            y : parseInt(respo.DataValue,10)
+        }
+	}
+});
+//Define collection and set the URL and the name of dataset in the result
+var BEACollection = new (backchartCollection.extend({
+     model: BEAModel,
+     url: "http://www.bea.gov/api/data",
+	 parse : function(respo){
+		return respo.BEAAPI ? respo.BEAAPI.Results.Data : [];
+     }
+}));
+//Bind collection to view
+BEAView.onCollection(BEACollection, {
+     type: "bar",
+     showInLegend: true
+});
+
+//Fetch data
+BEACollection.fetch({
+     dataType: "jsonp",
+     jsonp:"jsonp",
+     data: {
+           UserID : "2A28DB6F-5FE7-4A05-8899-D6F4B72C5102",
+           method : "GetData",
+           datasetname : "RegionalData",
+           KeyCode : "PCPI_CI",
+           GeoFIPS : "STATE",
+           Year : "2011",
+           ResultFormat : "json"
+     }
+});
+								</pre>
+							</div>
+							<div class="col-xs-12">
+                                <div id="bea-example">
+                                </div>
+                            </div>
+						</div>
+						<p>In the above illustration ,we create the basic factors : Model, Collection and View.</p>
+						<p>In <strong>Model</strong>, we defined the method that how to covered format of each data in results. Model is the minimum data unit in Backchart and each model in collection represent a point or a column or other unit in your chart's data.In the CanvasJS, each object in <code>dataPoints</code> Array is as a model in Backchart.
+						<p>The <strong>Collection</strong> is a dataset of models, you can set the URL to reference its location on the server.In the CanvasJS, each object in <code>data</code> Array is as a collection.</p>
+						<p>The <strong>View</strong> is a object wrapped the element up and will listen to the events from the collections whose have been bound to used <code>onCollection</code> function.You must pass a HTMLElement to the <code>container</code> in view and make sure it not be hidden.</p>
+						<p>As you see, when you invoke the <code>fetch</code> function to synchronous data from server, the chart will be draw on the element you passed to</p>
+
+						<hr>
+						<h3>Filter data</h3>
+						<p>The next, you boss want to filter the data which value above the average of United States.</p>
+						<p>Because the data has be stored in the collection, your job is only call <code>filter</code> function in collection to recreate a new dataset and set it to the collection</p>
+						<div class="row">
+							<div class="col-xs-12">
+								<div id="bea-example2-code">
+									<pre class="prettyprint">
+BEACollection.on("sync", function(){
+	var usAverage = BEACollection.findWhere({label: "United States"}).get("y");
+	BEACollection.set(BEACollection.filter(function(model){
+		reutrn model.get("y") > usAverage;
+	}));
+});
+									</pre>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div id="bea-example2" style="height:380px;">
+								</div>
+							</div>
+						</div>
+						<p>As you see, Backchart finished the rest of the work after you set the new data in the collection which has bound to.</p>
+						<hr>
+						<h3>Sort data</h3>
+						<p>After a brief rest, you boss demand you to sort the data in descending order.Don't worry about it, as you know, you just focus to the transformation of your data and Backchart finished the rest. Let's do work!</p>
+						<div class="row">
+							<div class="col-xs-12">
+								<div id="bea-example3-code">
+									<pre class="prettyprint">
+BEACollection.on("sync", function(){
+	//...code for filter
+	BEACollection.comparator = function(a, b){
+		return a.get("y")-b.get("y");
+	};
+	BEACollection.sort();
+});
+									</pre>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div id="bea-example3" style="height:380px;">
+								</div>
+							</div>
+						</div>
+						<p>Amazing! You finished your work after add four lines.</p>
+						<hr>
+						<h3>Change chart type</h3>
+						<p>After you finished all work and prepare to go home, the big boss tell you he want to check the percentage of each data by a pie chart.He just care about the data above the average and the reset of data should be add to an item called Other.Normally, we should change lots of code in you application because you should reconfigure the chart, but you just change a little in Backchart</p>
+						<div class="row">
+							<div class="col-xs-12">
+								<div id="bea-example4-code">
+									<pre class="prettyprint">
+var BEAView = new (backchartView.extend({
+    container : document.getElementById("bea-example")
+}))({
+	//Add the toolTip configure in view, please see CanvasJS document("http://canvasjs.com/docs/charts/chart-options/tooltip/) to get more detail
+	toolTip:{
+       content: "{label} : {y} ({percent})"
+   	}
+});
+BEACollection.on("sync", function(){
+	var usAverageModel = BEACollection.findWhere({label: "United States"});
+	var usAverage = usAverageModel.get("y");
+	BEACollection.remove(usAverageModel);
+
+	//First ,get the total value of data which bellow the average and all, filter this data at the same time.
+	var otherValue = 0,
+		totalValue = 0;
+	var modelSet = BEACollection.filter(function(model){
+		var val = model.get("y");
+		totalValue += val;
+		if (val < usAverage){
+			otherValue += val;
+			return false;
+		}
+		return true;
+	});
+	modelSet.push(new BEAModel({GeoName:"other",DataValue:otherValue})); 
+	$.each(modelSet, function(index, model){
+		model.set("percent", (model.get("y")/totalValue * 100).toFixed(2) + "%");
+	});
+		
+	//Change the type
+	BEAView.getRenderOptions(BEACollection).type = "pie";
+	//Add the percentage to all models attribute
+	BEACollection.reset(modelSet);
+});
+									</pre>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div id="bea-example4" style="height:480px;">
+								</div>
+							</div>
+						</div>
+						<hr>
+						<h3>Visible</h3>
+						<p>When you finally think that you done your work, the big boss throw a question."Can I choose the states I care about in this web page?"</p>
+						<p>Fuck boss! But very little code should be added in the in the implementation of this if you use Backchart.</p>
+						<div class="row">
+							<div id="bea-example5-code" class="col-xs-12">
+								<pre class="prettyprint">
+//Listen change event on select element and call show or hide function
+$("#bea-example5-select").on("change", function(e){
+     if (e.added){
+         var model = BEACollection.findWhere({"label" : e.added.id});
+         BEACollection.show(model);
+     }else if(e.removed){
+         var model = BEACollection.findWhere({"label" : e.removed.id});
+         BEACollection.hide(model);
+     }
+});
+								</pre>
+							</div>
+							<div class="col-xs-12">
+								<div class="row">
+									<div class="col-xs-12">
+										<input id="bea-example5-select" type="text" multiple style="width:100%"/> 
+									</div>
+									<div class="col-xs-12">
+										<div id="bea-example5" style="height:480px;">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</section>
+				<section id="moreexample">
+					<div class="bs-docs-header">
+						<div class="container">
+							<h1>More Example</h1>
+							<p>More example for describe the basic function and enumerate some useful APIs</p>
+						</div>
+					</div>
+					<div class="container bs-docs-container">
+						<div class="row">
+							<h2>Write your model and collection</h2>
+							<hr>
+							<p>At the beginning of creating your Backchart, you should define your Model and Collection extended from into <code>Backchart.base</code> that can describe the conversion mode from original data to data can be used by your chart library.</p>
+							<p>In MVC structure, Model containing the interactive data as well as a large part of the logic surrounding it and the collection is a logical grouping of date wrapped by Model. Make an CanvasJS example. You original data is here</p>
+							<pre class="prettyprint">
+{
+   success:true,
+   code:200,
+   result:[
+	   {index:"XA-01", group:"backchart,json-cover,upload",name:"Jone Casper", age: "24", phone:"13365772345"},
+	   {index:"XA-02", group:"bk, jsMusic", name:"Steve Robin", age: "26", phone:"(912) 555-1234"},
+       //...
+   ]
+}
+							</pre>
+							<p>You want to make a column chart about each person's age.Obviously only two fields <code>name</code> and <code>age</code> in the result is useful.So the first, we should define a model that only store the two filed and use it to initialize the lable and y filed (CanvasJs use "label" to indicate what a certain position on the axis means and y is the data value)</p>
+							<pre class="prettyprint">
+var myModel = backchartModel.extend({
+	parse : function(respo){
+		return {
+			label : respo.name,
+			y : parseInt(respo.age, 10)
+		}
+	}
+});
+							</pre>
+							<p>And then, we should define how to convey the <code>result</code> filed from return data and use it to initialize our Collection. </p>
+							<pre class="prettyprint">
+var myCollection = backchartCollection.extend({
+	 model: myModel,
+	 parse : function(respo){
+		return respo.success ? respo.result : [];
+	 }
+}));
+							</pre>
+							<h2>Create a view and bind collections</h2>
+							<p>After defined the model and collection, a view instance inherit <code>Backchart.CHART.view</code> can help you to draw the chart by data in collection.</p>
+							<p>In Backbone, the default view is so simple that just implement the basic event model ,it is not enough to make a relationship between view and lots of collections, so we defined <code>onCollection</code> to bind collection to view and return a unique ID to identify the relation.</p>
+							<p>The <code>onCollection</code> function has three arguments need to. The first argument is "collection" ,please passing a collection instance, and the second is "renderOptions" which defined all dataset level properties like type ,name, etc. you should check the document of your chart before pass to.The third argument is "options" that defined the collection bind attributes like bid(Bind ID), visible, etc. The more detail API is here</p>
+							<p>After bind one collection to a view instance, the instance will change(redraw) when you change the content of the collection.Obviously, there are serious problem should be noticed:</p>
+							<p><strong>What events will trigger the instance redraw?</strong></p>
+							<p>By the default, those events will be listened to used to trigger if your collection inherited the Backchart.base.collection or it's upper class.</p>
+							<ul>
+								<li>seted</li>
+								<li>removed</li>
+								<li>change</li> 
+								<li>destroy</li>
+								<li>reseted</li>
+								<li>sort</li>
+								<li>change:visible</li>
+							</ul>
+							<p>And the ordinary backbone collection will be listened</p>
+							<ul>
+								<li>set</li>
+								<li>add</li>
+								<li>change</li>
+								<li>destroy</li>
+								<li>reset</li>
+								<li>sort</li>
+							</ul>
+							<p><strong>When have a lots of data insert to ,remove from the collection or you want to reset the collection,how to prevent to call the redraw function frequently?</strong></p>
+							<p>If you collection inherited Backchart.base.collection or it's upper class, the default set, remove and reset function has be overwritten and will send <em>seted</em>, <em>removed</em> and <em>reseted</em> event after data operation finished and the redraw function will be called after this.For example</p>
+							<pre class="prettyprint">
+backCollection.add([
+	{name:"Jone", age:35}, //send add event
+	{name:"Harry", age:25}, //send add event
+	{name:"Mark", age:33}  //send add event
+]);
+//send seted event and the chart will redraw at the same time
+							</pre>
+							<p>The collection in the above code will send 3 times of <em>add</em> events when the runtime and just send one time of seted event after finished.There are only one redraw behavior as the same time of seted occur.</p>
+							<pre class="prettyprint">
+var wanttoadded = [ 
+	{name:"Jone", age:35}, 
+	{name:"Harry", age:25},
+	{name:"Mark", age:33}
+]
+//Avoid to do this!
+for (var i=0; i&lt;wanttoadded.length; i++){
+	backCollection.add(wanttoadded[i]); //send add event and seted event
+}
+							</pre>
+							<p>You should avoid to invoke add, set ,remove function in loop because it will make a lot of events and trigger the graph in view redraw many times.It will have a strong impact on the speed of your web application.</p>
+							<p>If you really want to use loop because you have some other things in this loop, call the <code>setSilence(true)</code> in your collection or your view to ban responding any events temporarily after the loop is a good idea and be recommended, and when jumping out of the loop, you should call the <code>setSilence(false)</code> to recover the default.</p>
+							<pre class="prettyprint">
+var wanttoadded = [ 
+	{name:"Jone", age:35}, 
+	{name:"Harry", age:25},
+	{name:"Mark", age:33}
+]
+backCollection.setSilence(true);
+for (var i=0; i&lt;wanttoadded.length; i++){
+	backCollection.add(wanttoadded[i]); //send add event and seted event
+}
+backCollection.setSilence(false);
+//To trigger redraw
+backCollection.trigger("seted");
+							</pre>
+							<p>Under some special condition, you want to rewrite the render function and call it when a given event be made.You can cover the default variable <code>eventCallback</code> when make the view instance.</p>
+							
+						</div>
+					</div>
+				</section>
+
+		</main>
+	<script src="statics/js/jquery/jquery-1.9.1.js"></script>
+	<script src="statics/js/google-code-prettify/prettify.js"></script>
+	<script src="statics/js/bootstrap/bootstrap.min.js"></script>
+	<script src="statics/js/jquery.onepage-scroll/jquery.onepage-scroll.min.js"></script>
+	<script src="statics/js/select2/select2.js"></script>
+
+	<script src="statics/js/utils/underscore-min.js"></script>
+	<script src="statics/js/utils/backbone-min.js"></script>
+	<script src="statics/js/charts/canvasjs/canvasjs.js"></script>
+	<!--[if lt IE 9]>
+	<script src="statics/js/utils/excanvas.js"></script>
+	<![endif]-->
+	<script src="statics/js/backchart/browser/backchart.canvasjs.js"></script>
+	<script src="statics/js/main.js"></script>
+</body>
+</html>
